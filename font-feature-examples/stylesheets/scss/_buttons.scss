@@ -1,0 +1,46 @@
+button,
+.link-as-btn,
+input[type="submit"] {
+  @include rem('min-width', 50px);
+  @include rem('padding', 5px 0);
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-family: $base-font-family;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 300ms ease-in-out;
+
+  &:disabled {
+    background-color: transparent;
+    color: $dark-grey;
+    border-color: $border-color;
+  }
+}
+
+.btn-primary {
+  @include rem('padding', 10px);
+  color: $white;
+  background-color: $highlight-color;
+  &:hover {
+    background-color: darken($highlight-color, 10%);
+  }
+}
+
+.btn-secondary {
+  @include rem('padding', 15px);
+  color: $highlight-color;
+  background-color: $white;
+  border: 1px $highlight-color solid;
+}
+
+.link-as-btn {
+  @include rem('padding', 10px);
+  @include rem('margin-bottom', 5px);
+  &:hover {
+    color: $white;
+  }
+}

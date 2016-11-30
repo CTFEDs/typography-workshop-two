@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../fonts/sourcesanspro-regular.woff2') format('woff2'),
+       url('../../fonts/sourcesanspro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  @include border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  //font-kerning: normal;
+  font-weight: $base-font-weight;
+  line-height: $line-height;
+  text-rendering: optimizelegibility;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.example-container {
+  @extend %clearfix;
+  @include rem('max-width', 500px);
+  margin: 5% auto;
+  padding: 1em;
+  border: 1px $border-color solid;
+
+  button {
+    float: right;
+  }
+}
+
+.font-example {
+
+  &.small-caps {
+    font-feature-settings: 'smcp' on;
+  }
+  &.caps-to-small-caps {
+    span {
+      color: red;
+      font-feature-settings: 'c2sc' on;
+    }
+  }
+  &.ligatures {
+    color: red;
+    font-feature-settings: 'liga' on;
+  }
+}
