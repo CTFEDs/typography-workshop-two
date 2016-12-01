@@ -1,0 +1,40 @@
+/* responsive tables */
+
+table {
+  @include rem('margin', 45px 0 20px);
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+caption {
+  @include rem('margin', 0 0 5px);
+  font-weight: 700;
+}
+
+thead {
+  position: relative;
+  -webkit-box-shadow: 0 3px 3px -4px #333333;
+  box-shadow: 0 3px 3px -4px #333333;
+}
+
+th, td {
+  @include font-size(24);
+}
+
+th, td {
+  height: 40px;
+  padding: 15px 8px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+td {
+  border-top: 1px solid #ddd;
+}
+
+th:nth-child(odd) {
+  width: 30%;
+}

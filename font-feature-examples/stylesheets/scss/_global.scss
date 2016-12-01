@@ -1,7 +1,44 @@
+//aalt c2sc case ccmp dnom frac mark mkmk numr onum ordn pnum salt sinf size smcp ss01 ss02 ss03 ss04 ss05 subs sups zero
 @font-face {
   font-family: 'Source Sans Pro';
   src: url('../../fonts/sourcesanspro-regular.woff2') format('woff2'),
        url('../../fonts/sourcesanspro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//lnum onum pnum salt ss01 ss02 ss03 tnum
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../fonts/opensans-regular.woff2') format('woff2'),
+       url('../../fonts/opensans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//aalt c2sc calt case cpsp dnom frac lnum mark mkmk numr onum ordn sinf smcp subs sups
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../../fonts/playfairdisplay-regular.woff2') format('woff2'),
+       url('../../fonts/playfairdisplay-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//aalt c2sc case cpsp dlig dnom frac hist lnum numr salt smcp subs sups
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  src: url('../../fonts/sortsmillgoudy-regular.woff2') format('woff2'),
+       url('../../fonts/sortsmillgoudy-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//c2sc case mark mkmk onum smcp tnum ss01
+@font-face {
+  font-family: 'Istok Web';
+  src: url('../../fonts/istokweb-regular.woff2') format('woff2'),
+       url('../../fonts/istokweb-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +54,6 @@ body {
   color: $text-color;
   font-size: $base-font-size;
   font-family: $base-font-family;
-  //font-kerning: normal;
   font-weight: $base-font-weight;
   line-height: $line-height;
   text-rendering: optimizelegibility;
@@ -28,6 +64,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 0;
 }
 
 img {
@@ -37,29 +78,118 @@ img {
 
 .example-container {
   @extend %clearfix;
-  @include rem('max-width', 500px);
+  @include rem('max-width', 700px);
   margin: 5% auto;
-  padding: 1em;
-  border: 1px $border-color solid;
 
   button {
     float: right;
   }
 }
 
+//############# DIFFERENT FONTS
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sorts-mill {
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+  font-feature-settings: 'liga' off;
+}
+
+.istok-web {
+  font-family: 'Istok Web', sans-serif;
+  font-feature-settings: 'tnum' off;
+}
+
+//############# FONT FEATURES
 .font-example {
+  @include rem('font-size', 24px);
 
   &.small-caps {
-    font-feature-settings: 'smcp' on;
+    span {
+      color: red;
+      font-feature-settings: 'smcp' on;
+    }
   }
+
   &.caps-to-small-caps {
     span {
       color: red;
       font-feature-settings: 'c2sc' on;
     }
   }
-  &.ligatures {
-    color: red;
-    font-feature-settings: 'liga' on;
+
+  &.common-ligatures {
+    span {
+      color: red;
+      font-feature-settings: 'liga' on;
+    }
+  }
+
+  &.discretionary-ligatures {
+    span {
+      color: red;
+      font-feature-settings: 'dlig' on;
+    }
+  }
+
+  &.historical-alternates {
+    span {
+      color: red;
+      font-feature-settings: 'hist' on;
+    }
+  }
+
+  &.tabular-numbers {
+    .ordinary {
+
+    }
+    .lining {
+      color: red;
+      font-feature-settings: 'lnum' on;
+    }
+    .tabular {
+      color: red;
+      font-feature-settings: 'tnum' on;
+    }
+  }
+
+  &.old-style-numerals {
+    span {
+      color: red;
+      font-feature-settings: 'onum' on;
+    }
+  }
+
+  &.diagonal-fractions {
+    span {
+      color: red;
+      font-feature-settings: 'frac' on;
+    }
+  }
+
+  &.ordinal-numerals {
+    span {
+      color: red;
+      font-feature-settings: 'ordn' on;
+    }
+  }
+
+  &.superscript {
+    span {
+      color: red;
+      font-feature-settings: 'sups' on;
+    }
+  }
+
+  &.subscript {
+    span {
+      color: red;
+      font-feature-settings: 'subs' on;
+    }
   }
 }

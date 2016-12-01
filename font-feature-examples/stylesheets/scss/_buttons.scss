@@ -1,7 +1,7 @@
 button,
 .link-as-btn,
 input[type="submit"] {
-  @include rem('min-width', 50px);
+  @include rem('min-width', 75px);
   @include rem('padding', 5px 0);
   display: inline-block;
   border: none;
