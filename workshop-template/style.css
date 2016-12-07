@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.content-container {
+	width: 55%;
+	margin: 0 auto;
+	padding: 1em;
+
+}
+
+header {
+	height: 800px;
+	background-color: #cdcdcd;
+	background-image: url('background.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 1em;
+	list-style: none;
+}
+
+.featured-location-container article {
+	border-top: 3px #fff solid;
+
+}
