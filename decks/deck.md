@@ -48,6 +48,10 @@ Won't cover these in order but discuss and deal with them as we do the practical
 
 ## 1. What we will build
 
+https://github.com/CTFEDs/typography-workshop-two
+
+![](../img/alphabet.jpg)
+
 ^ download repo etc
 
 ---
