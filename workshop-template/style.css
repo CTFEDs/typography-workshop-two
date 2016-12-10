@@ -15,15 +15,31 @@ body {
 }
 
 header {
-	height: 800px;
+	height: 755px;
 	background-color: #cdcdcd;
-	background-image: url('background.png');
+	background-image: url('img/background.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center center;
 }
 
-nav ul li {
+nav {
+	padding-top: 6em;
+}
+
+.logo {
+	float: left;
+	margin-left: -80px;
+	vertical-align: middle;
+	width: 60px;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
 	display: inline-block;
 	padding: 1em;
 	list-style: none;
